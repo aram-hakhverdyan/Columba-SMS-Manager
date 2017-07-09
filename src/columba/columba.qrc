@@ -1,0 +1,30 @@
+<RCC>
+  <qresource prefix="columba">
+    <file>Resources/usbmodem.png</file>
+    <file>Resources/colomba3.png</file>
+    <file>Resources/columba4.jpg</file>
+    <file>Resources/update.png</file>
+    <file>Resources/update2.png</file>
+    <file>Resources/settings.png</file>
+    <file>Resources/settings2.png</file>
+    <file>Resources/2.png</file>
+    <file>Resources/sendo.png</file>
+    <file>Resources/2white.png</file>
+    <file>Resources/ebd6b3a4b793ae3c20c1d719077ad8bf.png</file>
+    <file>Resources/YPS__email_mail_send_letter_mail_envelope_stamp_postal-512.png</file>
+    <file>Resources/gif/sending.gif</file>
+    <file>Resources/send_message.ico</file>
+    <file>Resources/send_message.png</file>
+    <file>Resources/send_message2.png</file>
+    <file>Resources/send_message2_.png</file>
+    <file>Resources/ring.wav</file>
+    <file>Resources/remove.png</file>
+    <file>Resources/copy.png</file>
+    <file>Resources/edit.png</file>
+    <file>Resources/selectall.png</file>
+    <file>Resources/select.png</file>
+    <file>Resources/deselect.png</file>
+    <file>Resources/ok.png</file>
+    <file>Resources/question.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,83 @@
+#ifndef GUI_SETTINGS_DLG_H
+#define GUI_SETTINGS_DLG_H
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//	Includes
+//
+#include "ui_settings.h"
+#include "gui_statusview.h"
+// Qt
+#include <QDialog>
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+namespace gui { // SMS Engin 
+////////////////////////////////////////////////////////////////////////////////
+
+
+//enum class EConnectionStatus
+//{
+//	Undefined,
+//	Succedded,
+//	Failed
+//};
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//	class CSendersView
+//
+class CSettingsDialog : public QDialog
+{
+	Q_OBJECT
+	typedef QDialog Base;
+
+public:
+	// Constructor & Destructor
+	CSettingsDialog( QWidget* pParent = nullptr );
+	~CSettingsDialog() = default;
+
+public:
+	// 
+	//	Main Methods
+	//
+	void SetPortItems( QStringList const& lstPortItems );
+	QString GetPortItemAt( int nIdx );
+	EConnectionStatus GetConnectionStatusAt( int nIdx ) const;
+	void SetConnectionStatusAt( int nIdx, EConnectionStatus eStatus );
+	
+	int GetCurrentPortIndex() const;
+	int GetPortItemCount() const;
+
+	void Reset();
+
+signals:
+	void sigTryConnect( int nIdx, bool& bResult, QString* pMessage );
+	void sigTryDisconnect( int, bool&, QString* );
+	void sigUpdate();
+
+protected slots:
+	//void onTestItem();
+	void onConnect();
+	void onCurrentPortChanged( int nIndex );
+
+private:
+	//
+	//	Content
+	//
+	Ui::SettingsDlg ui;
+	CStatusView* m_pStatusView;
+};
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+//
+//	Inline Implementations
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+} // namespace gui
+////////////////////////////////////////////////////////////////////////////////
+
+#endif // GUI_SETTINGS_DLG_H
