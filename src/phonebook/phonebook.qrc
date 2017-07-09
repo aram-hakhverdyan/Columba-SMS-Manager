@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="phonebook">
+    <file>Resources/default_avatar.png</file>
+    <file>Resources/default_avatar2.png</file>
+    <file>Resources/camera.png</file>
+    <file>Resources/camera2.png</file>
+  </qresource>
+</RCC>
